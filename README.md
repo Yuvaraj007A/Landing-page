@@ -1,6 +1,10 @@
 # K.R. Arumugam General Merchant - Landing Page
 
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed_on-Vercel-black?logo=vercel)](https://landing-page-kappa-tawny-64.vercel.app/)
+
 A modern, visually stunning, and mobile-responsive landing page built for K.R. Arumugam General Merchant, a wholesale business. Meticulously crafted using React, Vite, and Tailwind CSS, the application boasts a premium user experience featuring subtle animations, component-based architecture, and a mobile-first design philosophy.
+
+**Live Website:** [https://landing-page-kappa-tawny-64.vercel.app/](https://landing-page-kappa-tawny-64.vercel.app/)
 
 ## ✨ Features
 
@@ -15,6 +19,7 @@ A modern, visually stunning, and mobile-responsive landing page built for K.R. A
 
 - **Frontend Framework:** [React](https://react.dev/) (v19)
 - **Build Tool:** [Vite](https://vitejs.dev/)
+- **Hosting:** [Vercel](https://vercel.com/)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
 - **Animations:** [Framer Motion](https://www.framer.com/motion/)
 - **Icons:** [Lucide React](https://lucide.dev/)
