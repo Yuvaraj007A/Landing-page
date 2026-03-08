@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Box, Cookie, Package, Sparkles } from 'lucide-react';
+import Tilt from 'react-parallax-tilt';
 
 const categories = [
     {
@@ -63,19 +64,28 @@ const Categories = () => {
                     {categories.map((category, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, scale: 0.9, y: 30 }}
+                            whileInView={{ opacity: 1, scale: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className={`p-8 rounded-2xl ${category.color} border ${category.borderColor} shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group`}
+                            transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.1 }}
                         >
-                            <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition-transform duration-300">
-                                {category.icon}
-                            </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-3">{category.title}</h3>
-                            <p className="text-gray-600 font-medium leading-relaxed">
-                                {category.description}
-                            </p>
+                            <Tilt
+                                tiltMaxAngleX={15}
+                                tiltMaxAngleY={15}
+                                scale={1.05}
+                                transitionSpeed={2000}
+                                className={`h-full p-8 rounded-2xl ${category.color} border ${category.borderColor} shadow-sm hover:shadow-[0_15px_40px_-10px_rgba(251,146,60,0.4)] transition-shadow duration-300 relative overflow-hidden group`}
+                            >
+                                <div className="absolute top-0 right-0 -m-4 w-20 h-20 bg-white opacity-40 rounded-full group-hover:scale-[3] transition-transform duration-700 ease-out z-0 mix-blend-overlay"></div>
+
+                                <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-md mb-6 transform group-hover:-translate-y-2 group-hover:shadow-[0_10px_20px_rgba(251,146,60,0.3)] transition-all duration-300 relative z-10 rotate-3 group-hover:-rotate-3">
+                                    {category.icon}
+                                </div>
+                                <h3 className="text-xl font-extrabold text-gray-900 mb-3 relative z-10">{category.title}</h3>
+                                <p className="text-gray-700 font-medium leading-relaxed relative z-10">
+                                    {category.description}
+                                </p>
+                            </Tilt>
                         </motion.div>
                     ))}
                 </div>

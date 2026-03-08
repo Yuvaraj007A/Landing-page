@@ -1,55 +1,58 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronRight } from 'lucide-react';
+import CanvasBackground from './CanvasBackground';
 
 const Hero = () => {
     return (
-        <section id="home" className="relative h-screen min-h-[600px] flex items-center justify-center pt-20 overflow-hidden bg-primary-50">
+        <section id="home" className="relative h-screen min-h-[600px] flex items-center justify-center pt-20 overflow-hidden bg-primary-900">
             <div className="absolute inset-0 z-0">
                 <img
                     src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80"
                     alt="Wholesale Grocery"
-                    className="w-full h-full object-cover opacity-20 object-center"
+                    className="w-full h-full object-cover opacity-10 object-center mix-blend-overlay"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-900/40 to-transparent mix-blend-multiply"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-950/80 via-primary-900/60 to-transparent mix-blend-multiply"></div>
             </div>
+
+            <CanvasBackground />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-center md:text-left">
                 <div className="md:w-2/3 lg:w-1/2">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
+                        transition={{ duration: 1, ease: 'easeOut' }}
                     >
-                        <span className="inline-block py-1 px-3 rounded-full bg-secondary-100 text-secondary-800 font-semibold text-sm mb-4 border border-secondary-200 uppercase tracking-widest shadow-sm">
+                        <span className="inline-block py-1.5 px-4 rounded-full bg-white/10 text-white font-semibold text-sm mb-4 border border-white/20 uppercase tracking-widest shadow-lg">
                             Established Supplier
                         </span>
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
-                            Your Trusted Wholesale Partner for <span className="text-primary-600">Daily Essentials</span>
+                        <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-6 drop-shadow-xl">
+                            Your Trusted <br className="hidden md:block" /> Wholesale Partner <br className="hidden md:block" /> for <span className="text-primary-400">Daily Essentials</span>
                         </h1>
                     </motion.div>
 
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
+                        transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }}
                     >
-                        <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-lg mx-auto md:mx-0 font-medium">
+                        <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-lg mx-auto md:mx-0 font-medium drop-shadow-md">
                             Supplying bulk biscuits, confectioneries, savouries, snacks and household products for retailers at unbeatable prices.
                         </p>
                     </motion.div>
 
                     <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.4 }}
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.8, ease: 'easeOut', delay: 0.4 }}
                         className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
                     >
-                        <a href="#products" className="inline-flex items-center justify-center px-8 py-3.5 border border-transparent text-base font-bold rounded-lg text-white bg-primary-600 hover:bg-primary-700 shadow-lg shadow-primary-600/30 hover:shadow-primary-600/50 transition-all duration-300 transform hover:-translate-y-1">
+                        <a href="#products" className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-bold rounded-xl text-primary-900 bg-primary-400 hover:bg-primary-300 shadow-[0_0_30px_rgba(250,204,21,0.4)] hover:shadow-[0_0_40px_rgba(250,204,21,0.6)] transition-all duration-300 transform hover:-translate-y-1">
                             Explore Products
                             <ChevronRight className="ml-2 h-5 w-5" />
                         </a>
-                        <a href="#contact" className="inline-flex items-center justify-center px-8 py-3.5 border-2 border-primary-600 text-base font-bold rounded-lg text-primary-700 bg-white hover:bg-primary-50 transition-all duration-300 shadow-sm">
+                        <a href="#contact" className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-base font-bold rounded-xl text-primary-900 bg-white hover:bg-gray-100 hover:border-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                             Contact Us
                         </a>
                     </motion.div>

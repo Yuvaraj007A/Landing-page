@@ -26,7 +26,7 @@ const brands = [
   { name: 'Oshon', domain: 'oshonindia.com', color: 'text-yellow-600', width: 'w-28 md:w-36' },
   { name: 'Nabati', domain: 'nabatisnack.co.id', color: 'text-yellow-600', width: 'w-28 md:w-36' },
   { name: 'Rathnas', domain: 'rathnasweets.com', color: 'text-yellow-600', width: 'w-28 md:w-36' },
-  { name: 'Manimark', domain: 'manimark.com', color: 'text-orange-600', width: 'w-48 md:w-56' },
+  { name: 'Manimark', domain: 'manimark.com', color: 'text-orange-600', width: 'w-28 md:w-36' },
   { name: 'Cadbuary', domain: 'cadbury.co.uk', color: 'text-purple-600', width: 'w-32 md:w-40' },
   { name: 'VVD', domain: 'vvd.in', color: 'text-purple-600', width: 'w-32 md:w-40' },
   { name: 'Parachute', domain: 'parachuteadvansed.com', color: 'text-purple-600', width: 'w-32 md:w-40' },
@@ -80,7 +80,7 @@ const Brands = () => {
           animate={{ x: ['0%', '-50%'] }}
           transition={{
             ease: "linear",
-            duration: 40,
+            duration: 90,
             repeat: Infinity,
           }}
         >

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Tilt from 'react-parallax-tilt';
 
 const About = () => {
     return (
@@ -13,13 +14,24 @@ const About = () => {
                         transition={{ duration: 0.6 }}
                         className="lg:w-1/2 relative"
                     >
-                        <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
+                        <Tilt
+                            tiltMaxAngleX={5}
+                            tiltMaxAngleY={5}
+                            scale={1.02}
+                            transitionSpeed={2000}
+                            className="relative z-10 rounded-2xl overflow-hidden shadow-[0_20px_50px_-12px_rgba(234,88,12,0.3)] group"
+                        >
                             <img
                                 src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                                 alt="Wholesale store interior"
-                                className="w-full h-[500px] object-cover scale-105 hover:scale-100 transition-transform duration-700"
+                                className="w-full h-[500px] object-cover scale-105 group-hover:scale-110 transition-transform duration-1000 ease-out"
                             />
-                        </div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                                <span className="text-white font-bold text-xl drop-shadow-lg transform translate-y-10 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                                    Our Warehouse
+                                </span>
+                            </div>
+                        </Tilt>
                         {/* Decorative background blocks */}
                         <div className="absolute -top-6 -left-6 w-32 h-32 bg-primary-200 rounded-2xl -z-10"></div>
                         <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-secondary-300 rounded-full opacity-50 -z-10"></div>
