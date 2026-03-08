@@ -2,38 +2,38 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const brands = [
-  { name: 'Britannia', domain: 'britannia.co.in', color: 'group-hover:text-red-600', width: 'w-32 md:w-40' },
-  { name: 'Godrej', domain: 'godrejenterprises.com', color: 'group-hover:text-orange-500', width: 'w-32 md:w-40' },
-  { name: 'Parle', domain: 'parleproducts.com', color: 'group-hover:text-yellow-500', width: 'w-24 md:w-32' },
-  { name: 'Unilever', domain: 'hul.co.in', color: 'group-hover:text-blue-700', width: 'w-16 md:w-20' },
-  { name: 'P&G', domain: 'pg.com', color: 'group-hover:text-blue-600', width: 'w-16 md:w-20' },
-  { name: 'CavinKare', domain: 'cavinkare.com', color: 'group-hover:text-green-600', width: 'w-36 md:w-48' },
-  { name: 'Emami', domain: 'emamiltd.in', color: 'group-hover:text-purple-600', width: 'w-28 md:w-36' },
-  { name: 'Kaleesuwari', domain: 'kaleesuwari.com', color: 'group-hover:text-yellow-600', width: 'w-36 md:w-48' },
-  { name: 'Gopuram', domain: 'gopuramproducts.com', color: 'group-hover:text-red-500', width: 'w-32 md:w-40' },
-  { name: 'GRB', domain: 'grbdairyfood.com', color: 'group-hover:text-orange-600', width: 'w-24 md:w-32' },
-  { name: 'Nestle', domain: 'nestle.com', color: 'group-hover:text-blue-500', width: 'w-32 md:w-40' },
-  { name: 'Nescafe', domain: 'nescafe.com', color: 'group-hover:text-blue-500', width: 'w-32 md:w-40' },
-  { name: 'Aachi', domain: 'aachifoods.com', color: 'group-hover:text-red-600', width: 'w-28 md:w-36' },
-  { name: 'Anil', domain: 'theanilgroup.com', color: 'group-hover:text-red-600', width: 'w-28 md:w-36' },
-  { name: 'ITC', domain: 'itcportal.com', color: 'group-hover:text-blue-800', width: 'w-24 md:w-32' },
-  { name: 'Bingo', domain: 'bingosnacks.com', color: 'group-hover:text-blue-800', width: 'w-24 md:w-32' },
-  { name: 'Lion Dates', domain: 'liondates.com', color: 'group-hover:text-red-700', width: 'w-24 md:w-32' },
-  { name: 'Tata Tea', domain: 'tataconsumer.com', color: 'group-hover:text-green-700', width: 'w-48 md:w-56' },
-  { name: 'Eveready', domain: 'evereadyindia.com', color: 'group-hover:text-red-600', width: 'w-32 md:w-40' },
-  { name: 'Reckitt', domain: 'reckitt.com', color: 'group-hover:text-pink-600', width: 'w-32 md:w-40' },
-  { name: 'Lizol', domain: 'lizol.co.in', color: 'group-hover:text-pink-600', width: 'w-32 md:w-40' },
-  { name: 'Oshon', domain: 'oshonindia.com', color: 'group-hover:text-yellow-600', width: 'w-28 md:w-36' },
-  { name: 'Nabati', domain: 'nabatisnack.co.id', color: 'group-hover:text-yellow-600', width: 'w-28 md:w-36' },
-  { name: 'Rathnas', domain: 'rathnasweets.com', color: 'group-hover:text-yellow-600', width: 'w-28 md:w-36' },
-  { name: 'Manimark', domain: 'manimark.com', color: 'group-hover:text-orange-600', width: 'w-48 md:w-56' },
-  { name: 'Cadbuary', domain: 'cadbury.co.uk', color: 'group-hover:text-purple-600', width: 'w-32 md:w-40' },
-  { name: 'VVD', domain: 'vvd.in', color: 'group-hover:text-purple-600', width: 'w-32 md:w-40' },
-  { name: 'Parachute', domain: 'parachuteadvansed.com', color: 'group-hover:text-purple-600', width: 'w-32 md:w-40' },
-  { name: 'GokulSantol', domain: 'gokulsantol.com', color: 'group-hover:text-purple-600', width: 'w-32 md:w-40' },
-  { name: 'Colgate', domain: 'colgate.com', color: 'group-hover:text-purple-600', width: 'w-32 md:w-40' },
-  { name: 'Dabur', domain: 'dabur.com', color: 'group-hover:text-purple-600', width: 'w-32 md:w-40' },
-  { name: 'Himalaya', domain: 'himalayawellness.in', color: 'group-hover:text-purple-600', width: 'w-32 md:w-40' },
+  { name: 'Britannia', domain: 'britannia.co.in', color: 'text-red-600', width: 'w-32 md:w-40' },
+  { name: 'Godrej', domain: 'godrejenterprises.com', color: 'text-orange-500', width: 'w-32 md:w-40' },
+  { name: 'Parle', domain: 'parleproducts.com', color: 'text-yellow-500', width: 'w-24 md:w-32' },
+  { name: 'Unilever', domain: 'hul.co.in', color: 'text-blue-700', width: 'w-16 md:w-20' },
+  { name: 'P&G', domain: 'pg.com', color: 'text-blue-600', width: 'w-16 md:w-20' },
+  { name: 'CavinKare', domain: 'cavinkare.com', color: 'text-green-600', width: 'w-36 md:w-48' },
+  { name: 'Emami', domain: 'emamiltd.in', color: 'text-purple-600', width: 'w-28 md:w-36' },
+  { name: 'Kaleesuwari', domain: 'kaleesuwari.com', color: 'text-yellow-600', width: 'w-36 md:w-48' },
+  { name: 'Gopuram', domain: 'gopuramproducts.com', color: 'text-red-500', width: 'w-32 md:w-40' },
+  { name: 'GRB', domain: 'grbdairyfood.com', color: 'text-orange-600', width: 'w-24 md:w-32' },
+  { name: 'Nestle', domain: 'nestle.com', color: 'text-blue-500', width: 'w-32 md:w-40' },
+  { name: 'Nescafe', domain: 'nescafe.com', color: 'text-blue-500', width: 'w-32 md:w-40' },
+  { name: 'Aachi', domain: 'aachifoods.com', color: 'text-red-600', width: 'w-28 md:w-36' },
+  { name: 'Anil', domain: 'theanilgroup.com', color: 'text-red-600', width: 'w-28 md:w-36' },
+  { name: 'ITC', domain: 'itcportal.com', color: 'text-blue-800', width: 'w-24 md:w-32' },
+  { name: 'Bingo', domain: 'bingosnacks.com', color: 'text-blue-800', width: 'w-24 md:w-32' },
+  { name: 'Lion Dates', domain: 'liondates.com', color: 'text-red-700', width: 'w-24 md:w-32' },
+  { name: 'Tata Tea', domain: 'tataconsumer.com', color: 'text-green-700', width: 'w-48 md:w-56' },
+  { name: 'Eveready', domain: 'evereadyindia.com', color: 'text-red-600', width: 'w-32 md:w-40' },
+  { name: 'Reckitt', domain: 'reckitt.com', color: 'text-pink-600', width: 'w-32 md:w-40' },
+  { name: 'Lizol', domain: 'lizol.co.in', color: 'text-pink-600', width: 'w-32 md:w-40' },
+  { name: 'Oshon', domain: 'oshonindia.com', color: 'text-yellow-600', width: 'w-28 md:w-36' },
+  { name: 'Nabati', domain: 'nabatisnack.co.id', color: 'text-yellow-600', width: 'w-28 md:w-36' },
+  { name: 'Rathnas', domain: 'rathnasweets.com', color: 'text-yellow-600', width: 'w-28 md:w-36' },
+  { name: 'Manimark', domain: 'manimark.com', color: 'text-orange-600', width: 'w-48 md:w-56' },
+  { name: 'Cadbuary', domain: 'cadbury.co.uk', color: 'text-purple-600', width: 'w-32 md:w-40' },
+  { name: 'VVD', domain: 'vvd.in', color: 'text-purple-600', width: 'w-32 md:w-40' },
+  { name: 'Parachute', domain: 'parachuteadvansed.com', color: 'text-purple-600', width: 'w-32 md:w-40' },
+  { name: 'GokulSantol', domain: 'gokulsantol.com', color: 'text-purple-600', width: 'w-32 md:w-40' },
+  { name: 'Colgate', domain: 'colgate.com', color: 'text-purple-600', width: 'w-32 md:w-40' },
+  { name: 'Dabur', domain: 'dabur.com', color: 'text-purple-600', width: 'w-32 md:w-40' },
+  { name: 'Himalaya', domain: 'himalayawellness.in', color: 'text-purple-600', width: 'w-32 md:w-40' },
 ];
 
 const BrandLogo = ({ brand }) => {
@@ -41,16 +41,16 @@ const BrandLogo = ({ brand }) => {
   const showText = imgError || !brand.domain;
 
   return (
-    <div className={`flex items-center justify-center group cursor-pointer h-16 ${brand.width}`}>
+    <div className={`flex items-center justify-center h-16 ${brand.width}`}>
       {!showText ? (
         <img
           src={`https://img.logo.dev/${brand.domain}?token=pk_Vgnn2BaHS72krLmVjSybew`}
           alt={`${brand.name} Logo`}
-          className="max-h-12 w-full object-contain filter grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+          className="max-h-12 w-full object-contain"
           onError={() => setImgError(true)}
         />
       ) : (
-        <span className={`text-2xl md:text-3xl font-black tracking-tight text-gray-400 opacity-60 group-hover:opacity-100 transition-colors duration-300 ${brand.color}`}>
+        <span className={`text-2xl md:text-3xl font-black tracking-tight ${brand.color}`}>
           {brand.name}
         </span>
       )}
